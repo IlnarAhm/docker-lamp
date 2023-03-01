@@ -5,13 +5,16 @@ services:
   php:
     build:
       context: php
+    platform: linux/amd64
     ports:
     - "${HOST_MACHINE_UNSECURE_HOST_PORT}:80"
     volumes:
     - "./app:${APACHE_DOCUMENT_ROOT}"
+    # - "./php/go1.20.1.linux-amd64.tar.gz:/usr/local/go1.20.1.linux-amd64.tar.gz"
 
   mysql:
     image: mysql:5.7
+    platform: linux/amd64
     ports:
     - "${HOST_MACHINE_MYSQL_PORT}:3306"
     environment:
@@ -26,6 +29,7 @@ services:
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest
+    platform: linux/amd64
     restart: always
     ports:
       - "${HOST_MACHINE_PMA_PORT}:80"
