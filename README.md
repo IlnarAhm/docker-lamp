@@ -1,8 +1,9 @@
-# Docker LAMP-стек для простых проектов
+# Docker LAMP-стек для небольших проектов
 
-Базовая среда стека LAMP, созданная с использованием Docker Compose. В нее входит:
+Базовая среда стека LAMP c Golang, созданная с использованием Docker Compose. В нее входит:
 
 -   PHP [![Minimum PHP Version](https://img.shields.io/badge/PHP-8.2-blue)](https://php.net/)
+-   Go [![Go Version](https://img.shields.io/badge/Go-v1.20.1-blue)](https://php.net/)
 -   Apache
 -   MySql [![MySql Version](https://img.shields.io/badge/MySql-5.7-yellow)](https://php.net/)
 -   PhpMyAdmin
