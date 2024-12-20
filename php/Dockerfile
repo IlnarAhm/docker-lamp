@@ -30,14 +30,6 @@ RUN apt-get install -fyqq zip libzip-dev \
 RUN pecl install xdebug \
     && docker-php-ext-enable xdebug
 
-# Install golang
-COPY go1.20.1.linux-amd64.tar.gz /usr/local/go1.20.1.linux-amd64.tar.gz
-
-RUN rm -rf /usr/local/go \
-    && tar -C /usr/local -xzf /usr/local/go1.20.1.linux-amd64.tar.gz
-
-ENV PATH="${PATH}:/usr/local/go/bin"
-
 # Enable XDebug
 ADD xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
 
